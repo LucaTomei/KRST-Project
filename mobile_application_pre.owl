@@ -16,7 +16,7 @@
         <Class IRI="#Advertising"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#AppTypology"/>
+        <Class IRI="#Android"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Books"/>
@@ -142,6 +142,9 @@
         <Class IRI="#TravelAndTrasport"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Type"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Utilities"/>
     </Declaration>
     <Declaration>
@@ -154,6 +157,9 @@
         <Class IRI="#Workout"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#iOS"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#bornIn"/>
     </Declaration>
     <Declaration>
@@ -161,12 +167,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasBackendLanguage"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasBranchIn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasDeviceCompatibility"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEmployee"/>
@@ -199,6 +199,9 @@
         <ObjectProperty IRI="#livesIn"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#locatedIn"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#requires"/>
     </Declaration>
     <Declaration>
@@ -214,10 +217,16 @@
         <DataProperty IRI="#appSize"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#app_category"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#avgRatingCount"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#currVersionReleaseDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#deviceProducer"/>
+        <DataProperty IRI="#currentVersionRatingCount"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#firstVersionReleaseDate"/>
@@ -250,10 +259,10 @@
         <DataProperty IRI="#price"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#releaseDate"/>
+        <DataProperty IRI="#producer_name"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#releaseDate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#version"/>
@@ -281,9 +290,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AppleInc"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AppleWatch"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Argentina"/>
@@ -502,9 +508,6 @@
         <NamedIndividual IRI="#Max_Levchin"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Mi"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Microphone"/>
     </Declaration>
     <Declaration>
@@ -571,9 +574,6 @@
         <NamedIndividual IRI="#Ray_Chan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Redmi"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#René_Giretzlehner"/>
     </Declaration>
     <Declaration>
@@ -590,9 +590,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RuntasticPro"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Samsung_Galaxy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Scala"/>
@@ -697,13 +694,13 @@
         <NamedIndividual IRI="#iOS"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#iPad"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iPhone"/>
+        <NamedIndividual IRI="#iPad_Mini"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#japan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#12.1.2"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#9gag"/>
@@ -717,6 +714,10 @@
     <SubClassOf>
         <Class IRI="#Advertising"/>
         <Class IRI="#MobileApplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Android"/>
+        <Class IRI="#Platform"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Books"/>
@@ -866,9 +867,21 @@
         <Class IRI="#Workout"/>
         <Class IRI="#FitnessMonitor"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#iOS"/>
+        <Class IRI="#Platform"/>
+    </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#AppTypology"/>
-        <Class IRI="#Device"/>
+        <Class IRI="#Developer"/>
+        <Class IRI="#DeviceAccess"/>
+        <Class IRI="#MobileApplication"/>
+        <Class IRI="#Nation"/>
+        <Class IRI="#Platform"/>
+        <Class IRI="#Producer"/>
+        <Class IRI="#ProgrammingLanguage"/>
+        <Class IRI="#Type"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#DeviceAccess"/>
         <Class IRI="#MobileApplication"/>
         <Class IRI="#Nation"/>
@@ -876,18 +889,11 @@
         <Class IRI="#Platform"/>
         <Class IRI="#Producer"/>
         <Class IRI="#ProgrammingLanguage"/>
+        <Class IRI="#Type"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#AppTypology"/>
         <Class IRI="#DeviceAccess"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#AppTypology"/>
-        <Class IRI="#Platform"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#AppTypology"/>
-        <Class IRI="#Producer"/>
+        <Class IRI="#Type"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#DeviceAccess"/>
@@ -920,10 +926,6 @@
     <ClassAssertion>
         <Class IRI="#Producer"/>
         <NamedIndividual IRI="#AppleInc"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Device"/>
-        <NamedIndividual IRI="#AppleWatch"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Nation"/>
@@ -1118,7 +1120,7 @@
         <NamedIndividual IRI="#Hanbum_Kim"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#AppTypology"/>
+        <Class IRI="#Type"/>
         <NamedIndividual IRI="#Hybrid"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1214,15 +1216,11 @@
         <NamedIndividual IRI="#Max_Levchin"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Device"/>
-        <NamedIndividual IRI="#Mi"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#DeviceAccess"/>
         <NamedIndividual IRI="#Microphone"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#AppTypology"/>
+        <Class IRI="#Type"/>
         <NamedIndividual IRI="#Native"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1306,10 +1304,6 @@
         <NamedIndividual IRI="#Ray_Chan"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Device"/>
-        <NamedIndividual IRI="#Redmi"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Developer"/>
         <NamedIndividual IRI="#René_Giretzlehner"/>
     </ClassAssertion>
@@ -1332,10 +1326,6 @@
     <ClassAssertion>
         <Class IRI="#Cycling"/>
         <NamedIndividual IRI="#RuntasticPro"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Device"/>
-        <NamedIndividual IRI="#Samsung_Galaxy"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ProgrammingLanguage"/>
@@ -1442,7 +1432,7 @@
         <NamedIndividual IRI="#Wargaming_PublicCompanyLimited"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#AppTypology"/>
+        <Class IRI="#Type"/>
         <NamedIndividual IRI="#Web"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1475,11 +1465,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Device"/>
-        <NamedIndividual IRI="#iPad"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Device"/>
-        <NamedIndividual IRI="#iPhone"/>
+        <NamedIndividual IRI="#iPad_Mini"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Nation"/>
@@ -3378,39 +3364,14 @@
         <Literal>1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#AngryBirds"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">140251136</Literal>
+        <Literal>AngryBirds</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#AngryBirds"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#AngryBirds"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2013-05-02T11:25:38Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#AngryBirds"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#AngryBirds"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#AngryBirds"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2019</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#name"/>
-        <NamedIndividual IRI="#AngryBirds"/>
-        <Literal>Angry Birds Friends</Literal>
+        <Literal>SinglePlayer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
@@ -3418,19 +3379,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#AngryBirds"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.60276</Literal>
+        <Literal>RavioEntertainment</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
         <NamedIndividual IRI="#AngryBirds"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#deviceProducer"/>
-        <NamedIndividual IRI="#AppleWatch"/>
-        <Literal>AppleInc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isCrossPlatform"/>
@@ -3448,39 +3404,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">24</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#CouchTo5K"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">106153984</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#CouchTo5K"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T10:44:48Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#CouchTo5K"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2011-07-15T01:29:05Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#CouchTo5K"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#CouchTo5K"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#CouchTo5K"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">375</Literal>
+        <Literal>FitnessCoach</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#CouchTo5K"/>
-        <Literal>5K Runner: Couch to 5K Trainer</Literal>
+        <Literal>CouchTo5K</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
@@ -3488,9 +3419,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.99</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#CouchTo5K"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.79732</Literal>
+        <Literal>Active Network LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -3508,39 +3439,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">51</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#ESPN"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">132792320</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#ESPN"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-26T18:35:18Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#ESPN"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2009-06-01T23:35:32Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#ESPN"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#ESPN"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#ESPN"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">130</Literal>
+        <Literal>Sports</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#ESPN"/>
-        <Literal>ESPN: Live Sports &amp; Scores</Literal>
+        <Literal>ESPN</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
@@ -3548,9 +3454,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#ESPN"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.38462</Literal>
+        <Literal>ESPN, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -3563,34 +3469,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#Facebook"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">271296512</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#Facebook"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-04T17:40:20Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#Facebook"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-05T08:00:00Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#Facebook"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#Facebook"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#Facebook"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30104</Literal>
+        <Literal>SocialNetworking</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3603,14 +3484,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
-        <NamedIndividual IRI="#Facebook"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.64015</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#version"/>
+        <DataProperty IRI="#price"/>
         <NamedIndividual IRI="#Facebook"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">308.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#producer_name"/>
+        <NamedIndividual IRI="#Facebook"/>
+        <Literal>Facebook, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#appID"/>
@@ -3618,34 +3499,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#Fancy"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">54521856</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#Fancy"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T22:36:47Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#Fancy"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2010-12-10T19:52:44Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#Fancy"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#Fancy"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#Fancy"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">238</Literal>
+        <Literal>Lifestyle</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3658,9 +3514,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#Fancy"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.61765</Literal>
+        <Literal>Thing Daemon, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -3673,39 +3529,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#FoodPanda"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">191074304</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#FoodPanda"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2013-11-25T18:13:11Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#FoodPanda"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-02T10:05:54Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#FoodPanda"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#FoodPanda"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#FoodPanda"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2025</Literal>
+        <Literal>FoodAndDrink</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#FoodPanda"/>
-        <Literal>Foodpanda - Food Delivery</Literal>
+        <Literal>FoodPanda</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
@@ -3713,9 +3544,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#FoodPanda"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.59159</Literal>
+        <Literal>Foodpanda, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -3728,39 +3559,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">16</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#Foursquare"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">127775744</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#Foursquare"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-06T21:30:41Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#Foursquare"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2009-05-28T00:38:19Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#Foursquare"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#Foursquare"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#Foursquare"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">62</Literal>
+        <Literal>Lifestyle</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Foursquare"/>
-        <Literal>Foursquare City Guide</Literal>
+        <Literal>Foursquare</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
@@ -3768,9 +3574,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#Foursquare"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.22581</Literal>
+        <Literal>Foursquare, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -3783,34 +3589,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">23</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#GoodTask"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">110139392</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#GoodTask"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-04T23:09:56Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#GoodTask"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2016-03-24T08:12:27Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#GoodTask"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#GoodTask"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#GoodTask"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">57</Literal>
+        <Literal>StayOnTask</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3823,9 +3604,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#GoodTask"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.35088</Literal>
+        <Literal>Haha Interactive</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -3838,34 +3619,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#GoogleMaps"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">223924224</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#GoogleMaps"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-01T18:59:10Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#GoogleMaps"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2012-12-13T04:21:00Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#GoogleMaps"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#GoogleMaps"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#GoogleMaps"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">258554</Literal>
+        <Literal>Navigation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3878,9 +3634,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#GoogleMaps"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.64859</Literal>
+        <Literal>Google</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -3893,39 +3649,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#IMDBapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">67752960</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#IMDBapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-22T18:54:00Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#IMDBapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2010-02-17T01:37:39Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#IMDBapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#IMDBapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#IMDBapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6966</Literal>
+        <Literal>Lifestyle</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#IMDBapp"/>
-        <Literal>IMDb Film &amp; TV</Literal>
+        <Literal>IMDBapp</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
@@ -3933,9 +3664,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#IMDBapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.73557</Literal>
+        <Literal>IMDB</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -3958,34 +3689,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#MathematicalFormulas"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">13085696</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#MathematicalFormulas"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T22:57:11Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#MathematicalFormulas"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2009-04-01T07:43:36Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#MathematicalFormulas"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#MathematicalFormulas"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#MathematicalFormulas"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+        <Literal>Education</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3998,9 +3704,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#MathematicalFormulas"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+        <Literal>Antek Szadaj</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4008,44 +3714,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.36</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#deviceProducer"/>
-        <NamedIndividual IRI="#Mi"/>
-        <Literal>Xiaomi</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#NikeRunning"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
-        <NamedIndividual IRI="#NikeRunning"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">272826368</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#NikeRunning"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T19:33:26Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#NikeRunning"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2010-09-06T07:00:00Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#NikeRunning"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#NikeRunning"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#NikeRunning"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18563</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -4053,19 +3724,9 @@
         <Literal>Nike Running</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#price"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#NikeRunning"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
-        <NamedIndividual IRI="#NikeRunning"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.6694</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#version"/>
-        <NamedIndividual IRI="#NikeRunning"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">7.4</Literal>
+        <Literal>Nike, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isCrossPlatform"/>
@@ -4078,34 +3739,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">11</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#PaypalApp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">274422784</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#PaypalApp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T16:31:37Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#PaypalApp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-03T08:00:00Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#PaypalApp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#PaypalApp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#PaypalApp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">190576</Literal>
+        <Literal>Finance</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -4118,9 +3754,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#PaypalApp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.81788</Literal>
+        <Literal>Paypal</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4133,54 +3769,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
-        <NamedIndividual IRI="#PerformanceStretching"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">106153984</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#PerformanceStretching"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T10:44:48Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#PerformanceStretching"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2011-07-15T01:29:05Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#PerformanceStretching"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#PerformanceStretching"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#PerformanceStretching"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">375</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#PerformanceStretching"/>
-        <Literal>Performance Stretching - Foam Roller, Static, and Dynamic Stretche‪s‬</Literal>
+        <Literal>PerformanceStretching</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#price"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#PerformanceStretching"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.49</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
-        <NamedIndividual IRI="#PerformanceStretching"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.79732</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#version"/>
-        <NamedIndividual IRI="#PerformanceStretching"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
+        <Literal>lolo, LLC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#appID"/>
@@ -4188,39 +3784,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#Pomelo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">104111104</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#Pomelo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T23:35:31Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#Pomelo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2014-06-19T04:04:51Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#Pomelo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#Pomelo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#Pomelo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">103</Literal>
+        <Literal>PhotoAndVideo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Pomelo"/>
-        <Literal>Pomelo Filters</Literal>
+        <Literal>Pomelo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
@@ -4228,9 +3799,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#Pomelo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.24272</Literal>
+        <Literal>Xiamen Meitu Technology</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4243,11 +3814,6 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#deviceProducer"/>
-        <NamedIndividual IRI="#Redmi"/>
-        <Literal>Xiaomi</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#isCrossPlatform"/>
         <NamedIndividual IRI="#Ruby_on_Rails"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
@@ -4258,59 +3824,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
-        <NamedIndividual IRI="#RuntasticPro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">202387456</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#RuntasticPro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-01T07:43:08Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#RuntasticPro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2009-11-23T17:28:58Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#RuntasticPro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#RuntasticPro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#RuntasticPro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">66786</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#RuntasticPro"/>
         <Literal>Runtastic Pro</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#price"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#RuntasticPro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
-        <NamedIndividual IRI="#RuntasticPro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.64698</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#version"/>
-        <NamedIndividual IRI="#RuntasticPro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">11.2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#deviceProducer"/>
-        <NamedIndividual IRI="#Samsung_Galaxy"/>
-        <Literal>Samsung</Literal>
+        <Literal>Runtastic</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isCrossPlatform"/>
@@ -4323,34 +3844,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#Scribd"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">172141568</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#Scribd"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T22:11:09Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#Scribd"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-07T06:59:55Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#Scribd"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#Scribd"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#Scribd"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">290</Literal>
+        <Literal>Books</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -4363,9 +3859,9 @@
         <Literal>0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#Scribd"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.47931</Literal>
+        <Literal>Scribd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4378,34 +3874,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#Shazam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">47105024</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#Shazam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-03T11:31:21Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#Shazam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-09T08:00:00Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#Shazam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#Shazam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#Shazam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">908675</Literal>
+        <Literal>Music</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -4418,9 +3889,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#Shazam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.83378</Literal>
+        <Literal>ShazamEntertainmentLimited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4433,34 +3904,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#Soundcloud"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">109568000</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#Soundcloud"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-09T09:49:34Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#Soundcloud"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2009-11-03T18:42:46Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#Soundcloud"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#Soundcloud"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#Soundcloud"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2393</Literal>
+        <Literal>Music</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -4473,9 +3919,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#Soundcloud"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.43084</Literal>
+        <Literal>Soundcloud, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4488,34 +3934,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">31</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#Spotify"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">182524928</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#Spotify"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-10T07:49:47Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#Spotify"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-11T18:45:47Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#Spotify"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#Spotify"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#Spotify"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1211950</Literal>
+        <Literal>Music</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -4528,9 +3949,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#Spotify"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.67535</Literal>
+        <Literal>Spotify_Ltd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4548,34 +3969,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">33</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#SwiftKeyboard"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">107924480</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#SwiftKeyboard"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-09T12:08:26Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#SwiftKeyboard"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-17T19:48:55Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#SwiftKeyboard"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#SwiftKeyboard"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#SwiftKeyboard"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7816</Literal>
+        <Literal>Utilities</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -4588,9 +3984,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#SwiftKeyboard"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.66057</Literal>
+        <Literal>SwiftKey</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4603,34 +3999,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">54</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#Twitter"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">133281792</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#Twitter"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-10T17:00:08Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#Twitter"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2009-10-09T19:50:00Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#Twitter"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#Twitter"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#Twitter"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">117978</Literal>
+        <Literal>SocialNetworking</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -4643,9 +4014,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#Twitter"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.63882</Literal>
+        <Literal>Twitter, Inc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4658,39 +4029,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#Whatsapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">157603840</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#Whatsapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T17:17:35Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#Whatsapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2009-05-04T02:43:49Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#Whatsapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#Whatsapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#Whatsapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1238029</Literal>
+        <Literal>Messaging</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Whatsapp"/>
-        <Literal>WhatsApp Messenger</Literal>
+        <Literal>Whatsapp</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
@@ -4698,9 +4044,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#Whatsapp"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.68778</Literal>
+        <Literal>FacebookInc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4713,39 +4059,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#WorldOfTanks"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">2896175104</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#WorldOfTanks"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-24T09:43:12Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#WorldOfTanks"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2014-06-28T05:40:19Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#WorldOfTanks"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#WorldOfTanks"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#WorldOfTanks"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4701</Literal>
+        <Literal>MultiPlayer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#WorldOfTanks"/>
-        <Literal>World of Tanks Blitz PVP MMO</Literal>
+        <Literal>WorldOfTanks</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
@@ -4753,9 +4074,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#WorldOfTanks"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.57754</Literal>
+        <Literal>WARGAMING Public Company Limited</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4773,29 +4094,9 @@
         <Literal>YahooWeather</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
+        <DataProperty IRI="#app_category"/>
         <NamedIndividual IRI="#YahooWeather"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-10T23:05:17Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#YahooWeather"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2013-04-18T11:23:40Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#YahooWeather"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#YahooWeather"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#YahooWeather"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2550</Literal>
+        <Literal>Weather</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
@@ -4803,9 +4104,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#producer_name"/>
         <NamedIndividual IRI="#YahooWeather"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.4</Literal>
+        <Literal>Yahoo!</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4813,64 +4114,19 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.3</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#deviceProducer"/>
-        <NamedIndividual IRI="#iPad"/>
-        <Literal>AppleInc</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#deviceProducer"/>
-        <NamedIndividual IRI="#iPhone"/>
-        <Literal>AppleInc</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#9gag"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#appSize"/>
-        <NamedIndividual IRI="#9gag"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">78604288</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#currVersionReleaseDate"/>
-        <NamedIndividual IRI="#9gag"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-09T07:14:57Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#firstVersionReleaseDate"/>
-        <NamedIndividual IRI="#9gag"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2012-07-27T04:13:37Z</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInAppPurchase"/>
-        <NamedIndividual IRI="#9gag"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTabletCompatibility"/>
-        <NamedIndividual IRI="#9gag"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <NamedIndividual IRI="#9gag"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">726</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#9gag"/>
-        <Literal>9GAG: Best LOL Pics &amp; GIFs</Literal>
+        <Literal>9gag</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
         <NamedIndividual IRI="#9gag"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#userRanking"/>
-        <NamedIndividual IRI="#9gag"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.63912</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -4936,19 +4192,15 @@
         <Class IRI="#MobileApplication"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasBranchIn"/>
-        <Class IRI="#Producer"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasDeviceCompatibility"/>
-        <Class IRI="#MobileApplication"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEmployee"/>
         <Class IRI="#Producer"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasFrontendLanguage"/>
+        <Class IRI="#MobileApplication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLanguage"/>
         <Class IRI="#MobileApplication"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -4983,6 +4235,10 @@
         <Class IRI="#Developer"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locatedIn"/>
+        <Class IRI="#Producer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#requires"/>
         <Class IRI="#MobileApplication"/>
     </ObjectPropertyDomain>
@@ -4994,6 +4250,10 @@
         <ObjectProperty IRI="#worksWith"/>
         <Class IRI="#Developer"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#bornIn"/>
+        <Class IRI="#Nation"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#bornIn"/>
         <ObjectExactCardinality cardinality="1">
@@ -5013,20 +4273,6 @@
         <Class IRI="#ProgrammingLanguage"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasBranchIn"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#hasBranchIn"/>
-            <Class IRI="#Nation"/>
-        </ObjectMinCardinality>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasDeviceCompatibility"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#hasDeviceCompatibility"/>
-            <Class IRI="#Device"/>
-        </ObjectMinCardinality>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEmployee"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#hasEmployee"/>
@@ -5039,6 +4285,10 @@
             <ObjectProperty IRI="#hasFrontendLanguage"/>
             <Class IRI="#ProgrammingLanguage"/>
         </ObjectMinCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <Class IRI="#ProgrammingLanguage"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isDevelopedBy"/>
@@ -5086,7 +4336,7 @@
         <ObjectProperty IRI="#isTypeOf"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#isTypeOf"/>
-            <Class IRI="#AppTypology"/>
+            <Class IRI="#Type"/>
         </ObjectMinCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -5095,6 +4345,13 @@
             <ObjectProperty IRI="#livesIn"/>
             <Class IRI="#Nation"/>
         </ObjectExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locatedIn"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#Nation"/>
+        </ObjectMinCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#requires"/>
@@ -5112,8 +4369,16 @@
         <Class IRI="#Developer"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
+        <DataProperty IRI="#avgRatingCount"/>
+        <DataProperty IRI="#hasUserRatingCount"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <DataProperty IRI="#releaseDate"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#currentVersionRatingCount"/>
+        <DataProperty IRI="#hasUserRatingCount"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#firstVersionReleaseDate"/>
@@ -5128,12 +4393,20 @@
         <Class IRI="#MobileApplication"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#app_category"/>
+        <Class IRI="#MobileApplication"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#avgRatingCount"/>
+        <Class IRI="#MobileApplication"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <Class IRI="#MobileApplication"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#deviceProducer"/>
-        <Class IRI="#Device"/>
+        <DataProperty IRI="#currentVersionRatingCount"/>
+        <Class IRI="#MobileApplication"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#firstVersionReleaseDate"/>
@@ -5141,7 +4414,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasAge"/>
-        <Class IRI="#Developer"/>
+        <Class IRI="#Person"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasInAppPurchase"/>
@@ -5160,10 +4433,6 @@
         <Class IRI="#MobileApplication"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <Class IRI="#MobileApplication"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#isCrossPlatform"/>
         <Class IRI="#ProgrammingLanguage"/>
     </DataPropertyDomain>
@@ -5176,11 +4445,14 @@
         <Class IRI="#MobileApplication"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#releaseDate"/>
-        <Class IRI="#MobileApplication"/>
+        <DataProperty IRI="#producer_name"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#Producer"/>
+        </ObjectSomeValuesFrom>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#userRanking"/>
+        <DataProperty IRI="#releaseDate"/>
         <Class IRI="#MobileApplication"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -5199,12 +4471,20 @@
         <Datatype abbreviatedIRI="xsd:byte"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#app_category"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#avgRatingCount"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#deviceProducer"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <DataProperty IRI="#currentVersionRatingCount"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#firstVersionReleaseDate"/>
@@ -5231,10 +4511,6 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#hasUserRatingCount"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#isCrossPlatform"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
@@ -5247,12 +4523,12 @@
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#releaseDate"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
+        <DataProperty IRI="#producer_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#userRanking"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
+        <DataProperty IRI="#releaseDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#version"/>
@@ -5275,8 +4551,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#app_category</IRI>
+        <Literal>Category name of the application</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#avgRatingCount</IRI>
+        <Literal>Total user rating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#bornIn</IRI>
         <Literal>Where developer was born</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#currentVersionRatingCount</IRI>
+        <Literal>Rating also for current version</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5285,18 +4576,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#deviceProducer</IRI>
-        <Literal>Name of the device manufacturer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasAge</IRI>
         <Literal>Developer&apos;s Age</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasBranchIn</IRI>
-        <Literal>A producer can be located in 1 or more Nations</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5365,6 +4646,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#locatedIn</IRI>
+        <Literal>A producer can be located in 1 or more Nations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#name</IRI>
         <Literal>Application Name</Literal>
     </AnnotationAssertion>
@@ -5375,13 +4661,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#releaseDate</IRI>
-        <Literal>Release date of the application (datetime object)</Literal>
+        <IRI>#producer_name</IRI>
+        <Literal>Name of the application&apos;s producer</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#userRanking</IRI>
-        <Literal>A float between 0.0 and 5.0</Literal>
+        <IRI>#releaseDate</IRI>
+        <Literal>Release date of the application (datetime object)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
