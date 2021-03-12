@@ -13,6 +13,9 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="#Advertising"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#AppTypology"/>
     </Declaration>
     <Declaration>
@@ -40,9 +43,6 @@
         <Class IRI="#DeviceAccess"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Discover"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Education"/>
     </Declaration>
     <Declaration>
@@ -64,16 +64,10 @@
         <Class IRI="#FoodAndDrink"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FreeTime"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Games"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Health"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Instruction"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Lifestyle"/>
@@ -89,9 +83,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#MoneyManagement"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Motion"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MultiPlayer"/>
@@ -133,9 +124,6 @@
         <Class IRI="#SocialNetworking"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Socialize"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Sports"/>
     </Declaration>
     <Declaration>
@@ -164,12 +152,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#developedFor"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasAppCategory"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasAppTypology"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasBackendLanguage"/>
@@ -202,6 +184,12 @@
         <ObjectProperty IRI="#isProducerOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isSubtypeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTypeOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#livesIn"/>
     </Declaration>
     <Declaration>
@@ -215,6 +203,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#appID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#appSize"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -721,12 +712,16 @@
         <NamedIndividual IRI="#C++"/>
     </Declaration>
     <SubClassOf>
+        <Class IRI="#Advertising"/>
+        <Class IRI="#MobileApplication"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Books"/>
-        <Class IRI="#Instruction"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Business"/>
-        <Class IRI="#Instruction"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Calculators"/>
@@ -745,24 +740,20 @@
         <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Discover"/>
+        <Class IRI="#Education"/>
         <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Education"/>
-        <Class IRI="#Instruction"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Entertainment"/>
-        <Class IRI="#FreeTime"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Finance"/>
-        <Class IRI="#Instruction"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Fitness"/>
-        <Class IRI="#FreeTime"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FitnessCoach"/>
@@ -774,43 +765,31 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FoodAndDrink"/>
-        <Class IRI="#Discover"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#FreeTime"/>
         <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Games"/>
-        <Class IRI="#FreeTime"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Health"/>
-        <Class IRI="#Motion"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Instruction"/>
         <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lifestyle"/>
-        <Class IRI="#Discover"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Medical"/>
-        <Class IRI="#Instruction"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Messaging"/>
-        <Class IRI="#Socialize"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MoneyManagement"/>
         <Class IRI="#Business"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Motion"/>
-        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MultiPlayer"/>
@@ -818,19 +797,19 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Music"/>
-        <Class IRI="#FreeTime"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Navigation"/>
-        <Class IRI="#Motion"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PhotoAndVideo"/>
-        <Class IRI="#FreeTime"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Productivity"/>
-        <Class IRI="#Instruction"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Running"/>
@@ -842,15 +821,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SocialNetworking"/>
-        <Class IRI="#Socialize"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Socialize"/>
         <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sports"/>
-        <Class IRI="#FreeTime"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#StayOnTask"/>
@@ -858,11 +833,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tech"/>
-        <Class IRI="#Discover"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TravelAndTrasport"/>
-        <Class IRI="#Motion"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Utilities"/>
@@ -870,16 +845,39 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Wearables"/>
-        <Class IRI="#Motion"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Weather"/>
-        <Class IRI="#Motion"/>
+        <Class IRI="#MobileApplication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Workout"/>
         <Class IRI="#FitnessMonitor"/>
     </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AppTypology"/>
+        <Class IRI="#Device"/>
+        <Class IRI="#DeviceAccess"/>
+        <Class IRI="#MobileApplication"/>
+        <Class IRI="#Nation"/>
+        <Class IRI="#Person"/>
+        <Class IRI="#Platform"/>
+        <Class IRI="#Producer"/>
+        <Class IRI="#ProgrammingLanguage"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AppTypology"/>
+        <Class IRI="#DeviceAccess"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AppTypology"/>
+        <Class IRI="#Platform"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AppTypology"/>
+        <Class IRI="#Producer"/>
+    </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#DeviceAccess"/>
         <NamedIndividual IRI="#Accelerometer"/>
@@ -1543,11 +1541,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#AngryBirds"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
         <NamedIndividual IRI="#AngryBirds"/>
         <NamedIndividual IRI="#Apple_iPad"/>
@@ -1586,6 +1579,11 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#AngryBirds"/>
         <NamedIndividual IRI="#RavioEntertainment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#AngryBirds"/>
+        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBranchIn"/>
@@ -1648,11 +1646,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Apple_Books"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
         <NamedIndividual IRI="#Apple_Books"/>
         <NamedIndividual IRI="#AppleWatch"/>
@@ -1681,6 +1674,11 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#Apple_Books"/>
         <NamedIndividual IRI="#AppleInc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Apple_Books"/>
+        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bornIn"/>
@@ -2003,16 +2001,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#ESPN"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#ESPN"/>
-        <NamedIndividual IRI="#Web"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
         <NamedIndividual IRI="#ESPN"/>
         <NamedIndividual IRI="#Apple_iPhone"/>
@@ -2041,6 +2029,16 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#ESPN"/>
         <NamedIndividual IRI="#ESPNInc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#ESPN"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#ESPN"/>
+        <NamedIndividual IRI="#Web"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBranchIn"/>
@@ -2133,16 +2131,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Facebook"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Facebook"/>
-        <NamedIndividual IRI="#Web"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
         <NamedIndividual IRI="#Facebook"/>
         <NamedIndividual IRI="#ERLANG"/>
@@ -2193,6 +2181,16 @@
         <NamedIndividual IRI="#FacebookInc"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Facebook"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Facebook"/>
+        <NamedIndividual IRI="#Web"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBranchIn"/>
         <NamedIndividual IRI="#FacebookInc"/>
         <NamedIndividual IRI="#United_States"/>
@@ -2216,11 +2214,6 @@
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#Fancy"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Fancy"/>
-        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
@@ -2256,6 +2249,11 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#Fancy"/>
         <NamedIndividual IRI="#ThingDaemonInc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Fancy"/>
+        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#requires"/>
@@ -2308,16 +2306,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#FoodPanda"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#FoodPanda"/>
-        <NamedIndividual IRI="#Web"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
         <NamedIndividual IRI="#FoodPanda"/>
         <NamedIndividual IRI="#PHP"/>
@@ -2363,6 +2351,16 @@
         <NamedIndividual IRI="#FoodpandaInc"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#FoodPanda"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#FoodPanda"/>
+        <NamedIndividual IRI="#Web"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#requires"/>
         <NamedIndividual IRI="#FoodPanda"/>
         <NamedIndividual IRI="#GPS"/>
@@ -2396,11 +2394,6 @@
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#Foursquare"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Foursquare"/>
-        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
@@ -2438,6 +2431,11 @@
         <NamedIndividual IRI="#FoursquareLabsInc"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Foursquare"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#requires"/>
         <NamedIndividual IRI="#Foursquare"/>
         <NamedIndividual IRI="#Accelerometer"/>
@@ -2473,11 +2471,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#GoodTask"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
         <NamedIndividual IRI="#GoodTask"/>
         <NamedIndividual IRI="#AppleWatch"/>
@@ -2501,6 +2494,11 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#GoodTask"/>
         <NamedIndividual IRI="#HahaInteractive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#GoodTask"/>
+        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#worksIn"/>
@@ -2546,16 +2544,6 @@
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#GoogleMaps"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#GoogleMaps"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#GoogleMaps"/>
-        <NamedIndividual IRI="#Web"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
@@ -2611,6 +2599,16 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#GoogleMaps"/>
         <NamedIndividual IRI="#GoogleInc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#GoogleMaps"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#GoogleMaps"/>
+        <NamedIndividual IRI="#Web"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#requires"/>
@@ -2678,16 +2676,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#IMDBapp"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#IMDBapp"/>
-        <NamedIndividual IRI="#Web"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
         <NamedIndividual IRI="#IMDBapp"/>
         <NamedIndividual IRI="#C"/>
@@ -2731,6 +2719,16 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#IMDBapp"/>
         <NamedIndividual IRI="#IMDBInc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#IMDBapp"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#IMDBapp"/>
+        <NamedIndividual IRI="#Web"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bornIn"/>
@@ -3008,11 +3006,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#MathematicalFormulas"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
         <NamedIndividual IRI="#MathematicalFormulas"/>
         <NamedIndividual IRI="#Apple_iPhone"/>
@@ -3031,6 +3024,11 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#MathematicalFormulas"/>
         <NamedIndividual IRI="#AntekSzadaj"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#MathematicalFormulas"/>
+        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bornIn"/>
@@ -3083,11 +3081,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#NikeRunning"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
         <NamedIndividual IRI="#NikeRunning"/>
         <NamedIndividual IRI="#Apple_iPhone"/>
@@ -3116,6 +3109,11 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#NikeRunning"/>
         <NamedIndividual IRI="#NikeInk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#NikeRunning"/>
+        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#requires"/>
@@ -3183,16 +3181,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#PaypalApp"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#PaypalApp"/>
-        <NamedIndividual IRI="#Web"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
         <NamedIndividual IRI="#PaypalApp"/>
         <NamedIndividual IRI="#Java"/>
@@ -3238,14 +3226,19 @@
         <NamedIndividual IRI="#Paypal"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#PaypalApp"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#PaypalApp"/>
+        <NamedIndividual IRI="#Web"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#PerformanceStretching"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#PerformanceStretching"/>
-        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
@@ -3261,6 +3254,11 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#PerformanceStretching"/>
         <NamedIndividual IRI="#LoloLLC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#PerformanceStretching"/>
+        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#requires"/>
@@ -3343,11 +3341,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Pomelo"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
         <NamedIndividual IRI="#Pomelo"/>
         <NamedIndividual IRI="#Apple_iPad"/>
@@ -3381,6 +3374,11 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#Pomelo"/>
         <NamedIndividual IRI="#XiamenMeituTechnology"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Pomelo"/>
+        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bornIn"/>
@@ -3453,11 +3451,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#RuntasticPro"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
         <NamedIndividual IRI="#RuntasticPro"/>
         <NamedIndividual IRI="#AppleWatch"/>
@@ -3493,6 +3486,11 @@
         <NamedIndividual IRI="#Runtastic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#RuntasticPro"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#requires"/>
         <NamedIndividual IRI="#RuntasticPro"/>
         <NamedIndividual IRI="#Accelerometer"/>
@@ -3511,16 +3509,6 @@
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#Scribd"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Scribd"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Scribd"/>
-        <NamedIndividual IRI="#Web"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
@@ -3568,6 +3556,16 @@
         <NamedIndividual IRI="#ScribdReadUnlimitedBooks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Scribd"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Scribd"/>
+        <NamedIndividual IRI="#Web"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#Shazam"/>
         <NamedIndividual IRI="#Android"/>
@@ -3581,11 +3579,6 @@
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#Shazam"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Shazam"/>
-        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
@@ -3638,6 +3631,11 @@
         <NamedIndividual IRI="#ShazamEntertainmentLimited"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Shazam"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#requires"/>
         <NamedIndividual IRI="#Shazam"/>
         <NamedIndividual IRI="#Microphone"/>
@@ -3651,16 +3649,6 @@
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#Soundcloud"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Soundcloud"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Soundcloud"/>
-        <NamedIndividual IRI="#Web"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
@@ -3713,6 +3701,16 @@
         <NamedIndividual IRI="#SoundcloundInc"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Soundcloud"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Soundcloud"/>
+        <NamedIndividual IRI="#Web"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#Spotify"/>
         <NamedIndividual IRI="#Android"/>
@@ -3726,11 +3724,6 @@
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#Spotify"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Spotify"/>
-        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
@@ -3798,6 +3791,11 @@
         <NamedIndividual IRI="#Spotify_Ltd"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Spotify"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bornIn"/>
         <NamedIndividual IRI="#Stephen_Ma"/>
         <NamedIndividual IRI="#China"/>
@@ -3843,11 +3841,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#SwiftKeyboard"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDeviceCompatibility"/>
         <NamedIndividual IRI="#SwiftKeyboard"/>
         <NamedIndividual IRI="#AppleWatch"/>
@@ -3881,6 +3874,11 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#SwiftKeyboard"/>
         <NamedIndividual IRI="#SwiftKey"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#SwiftKeyboard"/>
+        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bornIn"/>
@@ -3936,16 +3934,6 @@
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#Twitter"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Twitter"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#Twitter"/>
-        <NamedIndividual IRI="#Web"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
@@ -4011,6 +3999,16 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#Twitter"/>
         <NamedIndividual IRI="#TwitterInc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Twitter"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#Twitter"/>
+        <NamedIndividual IRI="#Web"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#worksIn"/>
@@ -4088,21 +4086,6 @@
         <NamedIndividual IRI="#iOS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#WorldOfTanks"/>
-        <NamedIndividual IRI="#Hybrid"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#WorldOfTanks"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#WorldOfTanks"/>
-        <NamedIndividual IRI="#Web"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
         <NamedIndividual IRI="#WorldOfTanks"/>
         <NamedIndividual IRI="#C++"/>
@@ -4143,6 +4126,21 @@
         <NamedIndividual IRI="#Wargaming_PublicCompanyLimited"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#WorldOfTanks"/>
+        <NamedIndividual IRI="#Hybrid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#WorldOfTanks"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#WorldOfTanks"/>
+        <NamedIndividual IRI="#Web"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#YahooWeather"/>
         <NamedIndividual IRI="#Android"/>
@@ -4156,11 +4154,6 @@
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#YahooWeather"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#YahooWeather"/>
-        <NamedIndividual IRI="#Native"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
@@ -4213,6 +4206,11 @@
         <NamedIndividual IRI="#Yahoo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#YahooWeather"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#9gag"/>
         <NamedIndividual IRI="#Android"/>
@@ -4226,16 +4224,6 @@
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#9gag"/>
         <NamedIndividual IRI="#iOS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#9gag"/>
-        <NamedIndividual IRI="#Native"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <NamedIndividual IRI="#9gag"/>
-        <NamedIndividual IRI="#Web"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBackendLanguage"/>
@@ -4301,6 +4289,16 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#9gag"/>
         <NamedIndividual IRI="#9gagInc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#9gag"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <NamedIndividual IRI="#9gag"/>
+        <NamedIndividual IRI="#Web"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBranchIn"/>
@@ -4360,7 +4358,17 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#AngryBirds"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#AngryBirds"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">140251136</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#currVersionReleaseDate"/>
+        <NamedIndividual IRI="#AngryBirds"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#firstVersionReleaseDate"/>
@@ -4426,6 +4434,21 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#Apple_Books"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Apple_Books"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">14964736</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#currVersionReleaseDate"/>
+        <NamedIndividual IRI="#Apple_Books"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstVersionReleaseDate"/>
+        <NamedIndividual IRI="#Apple_Books"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasInAppPurchase"/>
@@ -4638,6 +4661,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">24</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#CouchTo5K"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">106153984</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#CouchTo5K"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T10:44:48Z</Literal>
@@ -4738,6 +4766,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">51</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#ESPN"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">132792320</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#ESPN"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-26T18:35:18Z</Literal>
@@ -4833,6 +4866,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Facebook"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">271296512</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#Facebook"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-04T17:40:20Z</Literal>
@@ -4881,6 +4919,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#Fancy"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Fancy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">54521856</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -4963,6 +5006,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#FoodPanda"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">191074304</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#FoodPanda"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2013-11-25T18:13:11Z</Literal>
@@ -5011,6 +5059,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#Foursquare"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Foursquare"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">127775744</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -5063,6 +5116,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">23</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#GoodTask"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">110139392</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#GoodTask"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-04T23:09:56Z</Literal>
@@ -5111,6 +5169,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#GoogleMaps"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#GoogleMaps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">223924224</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -5176,6 +5239,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#IMDBapp"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#IMDBapp"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">67752960</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -5433,6 +5501,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#MathematicalFormulas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">13085696</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#MathematicalFormulas"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T22:57:11Z</Literal>
@@ -5511,6 +5584,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#NikeRunning"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#NikeRunning"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">272826368</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -5598,6 +5676,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">11</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#PaypalApp"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">274422784</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#PaypalApp"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T16:31:37Z</Literal>
@@ -5646,6 +5729,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#PerformanceStretching"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#PerformanceStretching"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">106153984</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -5741,6 +5829,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#Pomelo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Pomelo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">104111104</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -5848,6 +5941,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#RuntasticPro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">202387456</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#RuntasticPro"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-01T07:43:08Z</Literal>
@@ -5908,6 +6006,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Scribd"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">172141568</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#Scribd"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T22:11:09Z</Literal>
@@ -5940,7 +6043,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
         <NamedIndividual IRI="#Scribd"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+        <Literal>0.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#userRanking"/>
@@ -5956,6 +6059,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#Shazam"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Shazam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">47105024</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -6008,6 +6116,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Soundcloud"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">109568000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#Soundcloud"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-09T09:49:34Z</Literal>
@@ -6056,6 +6169,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#Spotify"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">31</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Spotify"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">182524928</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -6143,6 +6261,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">33</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#SwiftKeyboard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">107924480</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#SwiftKeyboard"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-09T12:08:26Z</Literal>
@@ -6223,6 +6346,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">54</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Twitter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">133281792</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#Twitter"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-10T17:00:08Z</Literal>
@@ -6273,6 +6401,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Whatsapp"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">157603840</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#Whatsapp"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T17:17:35Z</Literal>
@@ -6321,6 +6454,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#WorldOfTanks"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#WorldOfTanks"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">2896175104</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -6378,6 +6516,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#appID"/>
+        <NamedIndividual IRI="#YahooWeather"/>
+        <Literal>YahooWeather</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#YahooWeather"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-10T23:05:17Z</Literal>
@@ -6403,11 +6546,6 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2550</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#name"/>
-        <NamedIndividual IRI="#YahooWeather"/>
-        <Literal>YahooWeather</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
         <NamedIndividual IRI="#YahooWeather"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
@@ -6426,6 +6564,11 @@
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#9gag"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#9gag"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#byte">78604288</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
@@ -6485,6 +6628,10 @@
         <ObjectProperty IRI="#hasFrontendLanguage"/>
         <ObjectProperty IRI="#hasLanguage"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSubtypeOf"/>
+        <ObjectProperty IRI="#isTypeOf"/>
+    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasEmployee"/>
         <ObjectProperty IRI="#worksIn"/>
@@ -6513,7 +6660,7 @@
         <ObjectProperty IRI="#isProducerOf"/>
     </InverseFunctionalObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="#hasAppTypology"/>
+        <ObjectProperty IRI="#isTypeOf"/>
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#bornIn"/>
@@ -6521,14 +6668,6 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#developedFor"/>
-        <Class IRI="#MobileApplication"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasAppCategory"/>
-        <Class IRI="#MobileApplication"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasAppTypology"/>
         <Class IRI="#MobileApplication"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -6568,6 +6707,17 @@
         <Class IRI="#Producer"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSubtypeOf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isTypeOf"/>
+            <Class IRI="#Fitness"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <Class IRI="#MobileApplication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#livesIn"/>
         <Class IRI="#Developer"/>
     </ObjectPropertyDomain>
@@ -6595,20 +6745,6 @@
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#developedFor"/>
             <Class IRI="#Platform"/>
-        </ObjectMinCardinality>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasAppCategory"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#hasAppCategory"/>
-            <Class IRI="#MobileApplication"/>
-        </ObjectMinCardinality>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasAppTypology"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#hasAppTypology"/>
-            <Class IRI="#AppTypology"/>
         </ObjectMinCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -6672,6 +6808,27 @@
         </ObjectMinCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSubtypeOf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isSubtypeOf"/>
+            <Class IRI="#FitnessCoach"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSubtypeOf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isSubtypeOf"/>
+            <Class IRI="#FitnessMonitor"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTypeOf"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#isTypeOf"/>
+            <Class IRI="#AppTypology"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#livesIn"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="#livesIn"/>
@@ -6703,6 +6860,10 @@
     </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="#appID"/>
+        <Class IRI="#MobileApplication"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#appSize"/>
         <Class IRI="#MobileApplication"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -6773,6 +6934,10 @@
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#appSize"/>
+        <Datatype abbreviatedIRI="xsd:byte"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
@@ -6841,6 +7006,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#appID</IRI>
         <Literal>App ID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#appSize</IRI>
+        <Literal>Size of the application in the store</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

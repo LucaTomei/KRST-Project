@@ -70,6 +70,7 @@ if __name__ == '__main__':
 	url = input()#"https://apps.apple.com/us/app/yahoo-weather/id628677149?uo=4&at=11l6hc&app=itunes&ct=fnd"
 	AppStoreTrackerOBJ = AppStoreTracker(url)
 	app_id = AppStoreTrackerOBJ.retrieveDATA()
+	#print(app_id)
 	print("\nName:", app_id["results"][0]["trackName"])
 	print("appSize:", app_id["results"][0]["fileSizeBytes"])
 	print("hasUserRatingCount:", app_id["results"][0]["userRatingCount"])
