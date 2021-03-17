@@ -1,6 +1,6 @@
-# Mobile Applications Ontology: DL Queries
+# <ins>Mobile Applications Ontology: DL Queries</ins>
 Once the ontology is complete, you can query the model created for a better understanding of the classification.
-This section shows some **DL queries** used to extrapolate important results.
+This section shows some <ins>**DL queries**</ins> used to extrapolate important results.
 
 ### Applications developed for iOS, native, which require GPS:
 
@@ -30,7 +30,7 @@ AppCategory and
 )
 ```
 
-###Totally free Android applications (which are free in the store and do not allow in-app purchases) written in Java:
+### Totally free Android applications (which are free in the store and do not allow in-app purchases) written in Java:
 
 ```
 AppCategory 
