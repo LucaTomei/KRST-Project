@@ -217,6 +217,9 @@
         <DataProperty IRI="#appSize"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#capital"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#currVersionReleaseDate"/>
     </Declaration>
     <Declaration>
@@ -298,9 +301,6 @@
         <NamedIndividual IRI="#Apple_iPhone"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Argentina"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Australia"/>
     </Declaration>
     <Declaration>
@@ -353,9 +353,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CouchTo5K"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Czech_Republic"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Daniel_Ek"/>
@@ -416,9 +413,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#FoursquareLabsInc"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#France"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GPS"/>
@@ -496,9 +490,6 @@
         <NamedIndividual IRI="#Luke_Nosek"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Malaysia"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Marco_Fung"/>
     </Declaration>
     <Declaration>
@@ -521,9 +512,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Naveen_Selvadurai"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Netherlands"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NikeInk"/>
@@ -565,13 +553,7 @@
         <NamedIndividual IRI="#Pomelo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Portugal"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Python"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Qatar"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RavioEntertainment"/>
@@ -620,12 +602,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SoundcloundInc"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#South_Africa"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Spain"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Spotify"/>
@@ -1044,10 +1020,6 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Nation"/>
-        <NamedIndividual IRI="#Argentina"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nation"/>
         <NamedIndividual IRI="#Australia"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1117,10 +1089,6 @@
     <ClassAssertion>
         <Class IRI="#FitnessCoach"/>
         <NamedIndividual IRI="#CouchTo5K"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nation"/>
-        <NamedIndividual IRI="#Czech_Republic"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Developer"/>
@@ -1201,10 +1169,6 @@
     <ClassAssertion>
         <Class IRI="#Producer"/>
         <NamedIndividual IRI="#FoursquareLabsInc"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nation"/>
-        <NamedIndividual IRI="#France"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DeviceAccess"/>
@@ -1311,10 +1275,6 @@
         <NamedIndividual IRI="#Luke_Nosek"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Nation"/>
-        <NamedIndividual IRI="#Malaysia"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Developer"/>
         <NamedIndividual IRI="#Marco_Fung"/>
     </ClassAssertion>
@@ -1345,10 +1305,6 @@
     <ClassAssertion>
         <Class IRI="#Developer"/>
         <NamedIndividual IRI="#Naveen_Selvadurai"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nation"/>
-        <NamedIndividual IRI="#Netherlands"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Producer"/>
@@ -1403,16 +1359,8 @@
         <NamedIndividual IRI="#Pomelo"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Nation"/>
-        <NamedIndividual IRI="#Portugal"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#ProgrammingLanguage"/>
         <NamedIndividual IRI="#Python"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nation"/>
-        <NamedIndividual IRI="#Qatar"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Producer"/>
@@ -1477,14 +1425,6 @@
     <ClassAssertion>
         <Class IRI="#Producer"/>
         <NamedIndividual IRI="#SoundcloundInc"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nation"/>
-        <NamedIndividual IRI="#South_Africa"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nation"/>
-        <NamedIndividual IRI="#Spain"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Music"/>
@@ -1674,33 +1614,6 @@
         <NamedIndividual IRI="#WindowsPhone"/>
         <NamedIndividual IRI="#iOS"/>
     </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#Argentina"/>
-        <NamedIndividual IRI="#Australia"/>
-        <NamedIndividual IRI="#Austria"/>
-        <NamedIndividual IRI="#Belgium"/>
-        <NamedIndividual IRI="#China"/>
-        <NamedIndividual IRI="#Czech_Republic"/>
-        <NamedIndividual IRI="#Denmark"/>
-        <NamedIndividual IRI="#Finland"/>
-        <NamedIndividual IRI="#France"/>
-        <NamedIndividual IRI="#Germany"/>
-        <NamedIndividual IRI="#India"/>
-        <NamedIndividual IRI="#Italy"/>
-        <NamedIndividual IRI="#Malaysia"/>
-        <NamedIndividual IRI="#Netherlands"/>
-        <NamedIndividual IRI="#Poland"/>
-        <NamedIndividual IRI="#Portugal"/>
-        <NamedIndividual IRI="#Qatar"/>
-        <NamedIndividual IRI="#South_Africa"/>
-        <NamedIndividual IRI="#Spain"/>
-        <NamedIndividual IRI="#Sweden"/>
-        <NamedIndividual IRI="#Thailand"/>
-        <NamedIndividual IRI="#Ucraina"/>
-        <NamedIndividual IRI="#United_Kingdom"/>
-        <NamedIndividual IRI="#United_States"/>
-        <NamedIndividual IRI="#japan"/>
-    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBranchIn"/>
         <NamedIndividual IRI="#ActiveNetworkLLC"/>
@@ -3410,11 +3323,6 @@
         <ObjectProperty IRI="#requires"/>
         <NamedIndividual IRI="#PerformanceStretching"/>
         <NamedIndividual IRI="#Accelerometer"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#requires"/>
-        <NamedIndividual IRI="#PerformanceStretching"/>
-        <NamedIndividual IRI="#GPS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bornIn"/>
@@ -4597,6 +4505,21 @@
         <Literal>AppleInc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Australia"/>
+        <Literal>Canberra</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Austria"/>
+        <Literal>Vienna</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Belgium"/>
+        <Literal>Bruxelles</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasAge"/>
         <NamedIndividual IRI="#Ben_Medlock"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">38</Literal>
@@ -4690,6 +4613,11 @@
         <DataProperty IRI="#isCrossPlatform"/>
         <NamedIndividual IRI="#C"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#China"/>
+        <Literal>Pechino</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasAge"/>
@@ -4825,6 +4753,11 @@
         <DataProperty IRI="#hasSurname"/>
         <NamedIndividual IRI="#Daniel_Ek"/>
         <Literal>Ek</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Denmark"/>
+        <Literal>Copenaghen</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasAge"/>
@@ -5087,6 +5020,11 @@
         <Literal>Rachůnek</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Finland"/>
+        <Literal>Helsinky</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasAge"/>
         <NamedIndividual IRI="#Florian_Gschwandtner"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">38</Literal>
@@ -5114,12 +5052,12 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <NamedIndividual IRI="#FoodPanda"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2013-11-25T18:13:11Z</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-02T10:05:54Z</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#firstVersionReleaseDate"/>
         <NamedIndividual IRI="#FoodPanda"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-02T10:05:54Z</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2013-11-25T18:13:11Z</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasInAppPurchase"/>
@@ -5210,6 +5148,11 @@
         <DataProperty IRI="#version"/>
         <NamedIndividual IRI="#Foursquare"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">11.22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Germany"/>
+        <Literal>Berlin</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#appID"/>
@@ -5390,6 +5333,16 @@
         <DataProperty IRI="#version"/>
         <NamedIndividual IRI="#IMDBapp"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">11.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#India"/>
+        <Literal>New Delhi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Italy"/>
+        <Literal>Rome</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasAge"/>
@@ -5927,6 +5880,11 @@
         <Literal>Inghelbrecht</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Poland"/>
+        <Literal>Varsavia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#Pomelo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
@@ -6352,6 +6310,11 @@
         <Literal>Wozniak</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Sweden"/>
+        <Literal>Stoccolma</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#isCrossPlatform"/>
         <NamedIndividual IRI="#Swift"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
@@ -6410,6 +6373,11 @@
         <DataProperty IRI="#version"/>
         <NamedIndividual IRI="#SwiftKeyboard"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Thailand"/>
+        <Literal>Bangkok</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasAge"/>
@@ -6495,6 +6463,21 @@
         <DataProperty IRI="#version"/>
         <NamedIndividual IRI="#Twitter"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">8.55</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#Ucraina"/>
+        <Literal>Kiev</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#United_Kingdom"/>
+        <Literal>London</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#United_States"/>
+        <Literal>Washington</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#appID"/>
@@ -6665,6 +6648,11 @@
         <DataProperty IRI="#version"/>
         <NamedIndividual IRI="#YahooWeather"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capital"/>
+        <NamedIndividual IRI="#japan"/>
+        <Literal>Tokyo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#appID"/>
@@ -6916,6 +6904,10 @@
         <Class IRI="#AppCategory"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#capital"/>
+        <Class IRI="#Nation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#currVersionReleaseDate"/>
         <Class IRI="#AppCategory"/>
     </DataPropertyDomain>
@@ -6985,6 +6977,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#appSize"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#capital"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#currVersionReleaseDate"/>
