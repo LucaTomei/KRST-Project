@@ -145,6 +145,10 @@ The first type of property is built around the classes and refers to different a
     <img src="Images/entity-relation.png"  width=100% align="center" >
 </p>
 
+
+## [Powerpoint Presentation](Docs/README.md)
+
+
 ## Software
 
 * [Protégé](https://protege.stanford.edu/products.php#desktop-protege)
