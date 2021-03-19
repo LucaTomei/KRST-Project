@@ -3425,6 +3425,11 @@
         <NamedIndividual IRI="#GoogleInc"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBranchIn"/>
+        <NamedIndividual IRI="#Paypal"/>
+        <NamedIndividual IRI="#United_States"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#PaypalApp"/>
         <NamedIndividual IRI="#Android"/>
