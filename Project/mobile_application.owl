@@ -13,6 +13,9 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="#Android_Applications"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#AppCategory"/>
     </Declaration>
     <Declaration>
@@ -71,6 +74,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Games"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GraphicDesign"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Health"/>
@@ -145,6 +151,15 @@
         <Class IRI="#Tech"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#TopFreeApps"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TopPaidApps"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TopRated"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#TravelAndTrasport"/>
     </Declaration>
     <Declaration>
@@ -158,6 +173,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Workout"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#iOS_Applications"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#bornIn"/>
@@ -484,6 +502,9 @@
         <NamedIndividual IRI="#LoloLLC"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Ludovic_Huraux"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Lukas_Nagel"/>
     </Declaration>
     <Declaration>
@@ -592,6 +613,12 @@
         <NamedIndividual IRI="#ScribdReadUnlimitedBooks"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Shapr3D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shapr3D_Zrt."/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Shazam"/>
     </Declaration>
     <Declaration>
@@ -696,6 +723,135 @@
     <Declaration>
         <NamedIndividual IRI="#C++"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Android_Applications"/>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasFrontendLanguage"/>
+                    <NamedIndividual IRI="#C"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasFrontendLanguage"/>
+                    <NamedIndividual IRI="#Java"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasFrontendLanguage"/>
+                    <NamedIndividual IRI="#C++"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#developedFor"/>
+                <NamedIndividual IRI="#Android"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasAppTypology"/>
+                <NamedIndividual IRI="#Native"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GraphicDesign"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Instruction"/>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#requires"/>
+                    <NamedIndividual IRI="#Accelerometer"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#requires"/>
+                    <NamedIndividual IRI="#Camera"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#requires"/>
+                    <NamedIndividual IRI="#GPS"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TopFreeApps"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AppCategory"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasUserRatingCount"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#userRanking"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="#price"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TopPaidApps"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AppCategory"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasUserRatingCount"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#price"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#userRanking"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#iOS_Applications"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#developedFor"/>
+                <NamedIndividual IRI="#iOS"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasAppTypology"/>
+                <NamedIndividual IRI="#Native"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasFrontendLanguage"/>
+                <NamedIndividual IRI="#Swift"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Android_Applications"/>
+        <Class IRI="#AppCategory"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#AppCategory"/>
         <ObjectSomeValuesFrom>
@@ -824,6 +980,10 @@
         <Class IRI="#FreeTime"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#GraphicDesign"/>
+        <Class IRI="#AppCategory"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Health"/>
         <Class IRI="#Motion"/>
     </SubClassOf>
@@ -935,6 +1095,18 @@
         <Class IRI="#Discover"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#TopFreeApps"/>
+        <Class IRI="#AppCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TopPaidApps"/>
+        <Class IRI="#AppCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TopRated"/>
+        <Class IRI="#AppCategory"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#TravelAndTrasport"/>
         <Class IRI="#Motion"/>
     </SubClassOf>
@@ -953,6 +1125,10 @@
     <SubClassOf>
         <Class IRI="#Workout"/>
         <Class IRI="#FitnessMonitor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#iOS_Applications"/>
+        <Class IRI="#AppCategory"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#AppCategory"/>
@@ -1411,6 +1587,10 @@
         <NamedIndividual IRI="#ScribdReadUnlimitedBooks"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Education"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Music"/>
         <NamedIndividual IRI="#Shazam"/>
     </ClassAssertion>
@@ -2961,6 +3141,26 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bornIn"/>
+        <NamedIndividual IRI="#Ludovic_Huraux"/>
+        <NamedIndividual IRI="#United_States"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDeveloperOf"/>
+        <NamedIndividual IRI="#Ludovic_Huraux"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#livesIn"/>
+        <NamedIndividual IRI="#Ludovic_Huraux"/>
+        <NamedIndividual IRI="#United_States"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#worksIn"/>
+        <NamedIndividual IRI="#Ludovic_Huraux"/>
+        <NamedIndividual IRI="#Shapr3D_Zrt."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#bornIn"/>
         <NamedIndividual IRI="#Lukas_Nagel"/>
         <NamedIndividual IRI="#Sweden"/>
     </ObjectPropertyAssertion>
@@ -3618,6 +3818,41 @@
         <ObjectProperty IRI="#isProducedBy"/>
         <NamedIndividual IRI="#Scribd"/>
         <NamedIndividual IRI="#ScribdReadUnlimitedBooks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#developedFor"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <NamedIndividual IRI="#iOS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAppTypology"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <NamedIndividual IRI="#Native"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDeviceCompatibility"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <NamedIndividual IRI="#Apple_iPad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFrontendLanguage"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <NamedIndividual IRI="#Swift"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isProducedBy"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <NamedIndividual IRI="#Shapr3D_Zrt."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#requires"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <NamedIndividual IRI="#Accelerometer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBranchIn"/>
+        <NamedIndividual IRI="#Shapr3D_Zrt."/>
+        <NamedIndividual IRI="#United_States"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#developedFor"/>
@@ -5476,6 +5711,21 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#Ludovic_Huraux"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">24</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Ludovic_Huraux"/>
+        <Literal>Ludovic</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSurname"/>
+        <NamedIndividual IRI="#Ludovic_Huraux"/>
+        <Literal>Huraux</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
         <NamedIndividual IRI="#Lukas_Nagel"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">32</Literal>
     </DataPropertyAssertion>
@@ -6116,6 +6366,61 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#appID"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">29</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appSize"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">726552576</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#currVersionReleaseDate"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-18T11:45:36Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstVersionReleaseDate"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2016-03-21T15:12:59Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInAppPurchase"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTabletCompatibility"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUserRatingCount"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3492</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal>Shapr: CAD per modellazione 3D</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#userRanking"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.70303</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#version"/>
+        <NamedIndividual IRI="#Shapr3D"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#appID"/>
         <NamedIndividual IRI="#Shazam"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
     </DataPropertyAssertion>
@@ -6157,12 +6462,12 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
         <NamedIndividual IRI="#Shazam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.99</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#userRanking"/>
         <NamedIndividual IRI="#Shazam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.83378</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#version"/>
@@ -6362,7 +6667,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#price"/>
         <NamedIndividual IRI="#SwiftKeyboard"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.99</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#userRanking"/>

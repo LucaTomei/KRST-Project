@@ -20,7 +20,7 @@ and
 (firstVersionReleaseDate some xsd:dateTime[<=2021-01-01T00:00:00 ])
 ```
 
-### Application that requires some Device Access.
+### Application that requires some Device Access:
 
 ```
 AppCategory and 
@@ -34,8 +34,18 @@ AppCategory and
 
 ```
 AppCategory 
-and (hasInAppPurchase value false9
+and (hasInAppPurchase value false)
 and (developedFor value Android) 
 and (hasFrontendLanguage value Java)
 and (price value 0.0f)
+```
+
+### Top Paid iOS Apps:
+
+```
+AppCategory and 
+(userRanking some xsd:float[>=4.0]) and
+(hasUserRatingCount some xsd:integer[>=2000]) and 
+(price some xsd:float[>0.0]) and
+developedFor value iOS
 ```
