@@ -3430,6 +3430,11 @@
         <NamedIndividual IRI="#United_States"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isProducerOf"/>
+        <NamedIndividual IRI="#Paypal"/>
+        <NamedIndividual IRI="#PaypalApp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#developedFor"/>
         <NamedIndividual IRI="#PaypalApp"/>
         <NamedIndividual IRI="#Android"/>

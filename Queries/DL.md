@@ -2,7 +2,7 @@
 Once the ontology is complete, you can query the model created for a better understanding of the classification.
 This section shows some <ins>**DL queries**</ins> used to extrapolate important results.
 
-### Applications developed for iOS, native, which require GPS:
+### 1) Applications developed for iOS, native, which require GPS:
 
 ```
 AppCategory 
@@ -11,7 +11,7 @@ and hasAppTypology value Native
 and requires value GPS
 ```
 
-### Applications released between 2016 and 2021:
+### 2) Applications released between 2016 and 2021:
 
 ```
 AppCategory and 
@@ -20,7 +20,7 @@ and
 (firstVersionReleaseDate some xsd:dateTime[<=2021-01-01T00:00:00 ])
 ```
 
-### Application that requires some Device Access:
+### 3) Application that requires some Device Access:
 
 ```
 AppCategory and 
@@ -30,7 +30,7 @@ AppCategory and
 )
 ```
 
-### Totally free Android applications (which are free in the store and do not allow in-app purchases) written in Java:
+### 4) Totally free Android applications (which are free in the store and do not allow in-app purchases) written in Java:
 
 ```
 AppCategory 
@@ -40,7 +40,7 @@ and (hasFrontendLanguage value Java)
 and (price value 0.0f)
 ```
 
-### Top Paid iOS Apps:
+### 5) Top Paid iOS Apps:
 
 ```
 AppCategory and 
