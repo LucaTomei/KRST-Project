@@ -2,7 +2,27 @@
 Once the ontology is complete, you can query the model created for a better understanding of the classification.
 This section shows some <ins>**SPARQL queries**</ins> used to extrapolate important results.
 
-## 1) Top Rated Free iOS Apps
+## 1) Top 2 heaviest (in terms of bytes) applications in the store
+
+```
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX foaf: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
+
+SELECT DISTINCT ?Application (str(?bytes) as ?byte_app_size) ?Producer
+WHERE {
+	?Application rdf:type/rdfs:subClassOf* foaf:AppCategory.
+	?Application foaf:appSize ?bytes.
+	?Producer foaf:isProducerOf ?Application.
+}
+ORDER BY DESC(?bytes)
+LIMIT 2
+```
+
+## 2) Top Rated Free iOS Apps
 
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -23,7 +43,7 @@ WHERE {
 }
 ```
 
-## 2) Trending Android Apps For Music
+## 3) Trending Android Apps For Music
 
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -46,7 +66,7 @@ WHERE {
 ```
 
 
-## 3) All Developers who have developed an application in the Games category and who are over 25 years old
+## 4) All Developers who have developed an application in the Games category and who are over 25 years old
 
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -67,7 +87,7 @@ WHERE {
 ORDER BY ?Age
 ```
 
-## 4) The youngest successful application Developer
+## 5) The youngest successful application Developer
 
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -92,7 +112,7 @@ WHERE {
 }
 ```
 
-## 5) Top rated application developed in Java between 2019 and 2021 developed by a Producer that has branch in United States
+## 6) Top rated application developed in Java between 2019 and 2021 developed by a Producer that has branch in United States
 
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -118,4 +138,25 @@ WHERE {
 	?Producer foaf:hasBranchIn ?United_States.
 	?Producer foaf:isProducerOf ?Application.
 }
+```
+
+## 7) Most used cross-platform backend programming language in application development
+
+```
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX foaf: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
+
+SELECT  ?Language (COUNT(?Language) as ?backend) 
+WHERE {
+	?Application rdf:type/rdfs:subClassOf* foaf:AppCategory.
+	?Application foaf:hasBackendLanguage ?Language.
+	?Language foaf:isCrossPlatform ?cross.
+}
+GROUP BY ?Language
+ORDER BY DESC(?backend)
+LIMIT 1
 ```
