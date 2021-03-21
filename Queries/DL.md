@@ -11,6 +11,17 @@ and hasAppTypology value Native
 and requires value GPS
 ```
 
+#### Result
+
+|   Instances  |
+|:------------:|
+|     Fancy    |
+|   FoodPanda  |
+|  Foursquare  |
+|  GoogleMaps  |
+|  NikeRunning |
+| RuntasticPro |
+
 ### 2) Applications released between 2016 and 2021:
 
 ```
@@ -19,6 +30,16 @@ AppCategory and
 and 
 (firstVersionReleaseDate some xsd:dateTime[<=2021-01-01T00:00:00 ])
 ```
+
+#### Results
+
+| Instances |
+|:---------:|
+|  Facebook |
+|  GoodTask |
+| PaypalApp |
+|  Shapr3D  |
+|   Shazam  |
 
 ### 3) Application that requires some Device Access:
 
@@ -30,6 +51,21 @@ AppCategory and
 )
 ```
 
+#### Result
+
+|       Instances       |
+|:---------------------:|
+|       CouchTo5k       |
+|         Fancy         |
+|       FoodPanda       |
+|       Foursquare      |
+|       GoogleMaps      |
+|      NikeRunning      |
+| PerformanceStretching |
+|      RuntasticPro     |
+|        Shapr3D        |
+|         Shazam        |
+
 ### 4) Totally free Android applications (which are free in the store and do not allow in-app purchases) written in Java:
 
 ```
@@ -40,6 +76,13 @@ and (hasFrontendLanguage value Java)
 and (price value 0.0f)
 ```
 
+#### Result
+
+|   Instances  |
+|:------------:|
+|   Whatsapp   |
+| YahooWeather |
+
 ### 5) Top Paid iOS Apps:
 
 ```
@@ -49,3 +92,10 @@ AppCategory and
 (price some xsd:float[>0.0]) and
 developedFor value iOS
 ```
+
+#### Result
+
+|   Instances   |
+|:-------------:|
+|     Shazam    |
+| SwiftKeyboard |
