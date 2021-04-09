@@ -10,13 +10,13 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX foaf: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
+PREFIX mobileAppOnt: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
 
 SELECT DISTINCT ?Application (str(?bytes) as ?byte_app_size) ?Producer
 WHERE {
-	?Application rdf:type/rdfs:subClassOf* foaf:AppCategory.
-	?Application foaf:appSize ?bytes.
-	?Producer foaf:isProducerOf ?Application.
+	?Application rdf:type/rdfs:subClassOf* mobileAppOnt:AppCategory.
+	?Application mobileAppOnt:appSize ?bytes.
+	?Producer mobileAppOnt:isProducerOf ?Application.
 }
 ORDER BY DESC(?bytes)
 LIMIT 2
@@ -126,19 +126,19 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX foaf: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
+PREFIX mobileAppOnt: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
 
 SELECT ?Developer (str(?Age) as ?age) ?Application
 WHERE {
-	?Developer foaf:isDeveloperOf ?Application.
-	?Developer foaf:hasAge ?Age
+	?Developer mobileAppOnt:isDeveloperOf ?Application.
+	?Developer mobileAppOnt:hasAge ?Age
 	{
 		SELECT (min(?y) as ?Age)
-		WHERE {?Developer foaf:hasAge ?y}
+		WHERE {?Developer mobileAppOnt:hasAge ?y}
 	}
-	?Application foaf:hasUserRatingCount ?userRating.
+	?Application mobileAppOnt:hasUserRatingCount ?userRating.
 	FILTER (?userRating >3000).
-	?Application foaf:userRanking ?userRanking.
+	?Application mobileAppOnt:userRanking ?userRanking.
 	FILTER (?userRanking >4).
 }
 ```
@@ -157,23 +157,23 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX foaf: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
+PREFIX mobileAppOnt: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
 
 SELECT DISTINCT ?Application ?Producer (str(?Ranking) as ?ranking) (str(?releaseDate) as ?first_release)  (str(?currReleaseDate) as ?latest_update)
 WHERE {
-	?Application rdf:type/rdfs:subClassOf* foaf:AppCategory.
-	?Application foaf:userRanking ?Ranking
+	?Application rdf:type/rdfs:subClassOf* mobileAppOnt:AppCategory.
+	?Application mobileAppOnt:userRanking ?Ranking
 	{
 		SELECT (max(?y) as ?Ranking)
-		WHERE {?Application foaf:userRanking ?y}
+		WHERE {?Application mobileAppOnt:userRanking ?y}
 	}
-	?Application foaf:hasLanguage* ?Java.
-	?Application foaf:firstVersionReleaseDate ?releaseDate
+	?Application mobileAppOnt:hasLanguage* ?Java.
+	?Application mobileAppOnt:firstVersionReleaseDate ?releaseDate
 	FILTER (?releaseDate > "2019-01-01T00:00:00Z"^^xsd:dateTime)
-	?Application foaf:currVersionReleaseDate ?currReleaseDate
+	?Application mobileAppOnt:currVersionReleaseDate ?currReleaseDate
 	FILTER (?releaseDate < "2021-01-01T00:00:00Z"^^xsd:dateTime)
-	?Producer foaf:hasBranchIn ?United_States.
-	?Producer foaf:isProducerOf ?Application.
+	?Producer mobileAppOnt:hasBranchIn ?United_States.
+	?Producer mobileAppOnt:isProducerOf ?Application.
 }
 ```
 
@@ -191,13 +191,13 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX foaf: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
+PREFIX mobileAppOnt: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
 
 SELECT  ?Language (COUNT(?Language) as ?backend) 
 WHERE {
-	?Application rdf:type/rdfs:subClassOf* foaf:AppCategory.
-	?Application foaf:hasBackendLanguage ?Language.
-	?Language foaf:isCrossPlatform ?cross.
+	?Application rdf:type/rdfs:subClassOf* mobileAppOnt:AppCategory.
+	?Application mobileAppOnt:hasBackendLanguage ?Language.
+	?Language mobileAppOnt:isCrossPlatform ?cross.
 }
 GROUP BY ?Language
 ORDER BY DESC(?backend)
@@ -210,7 +210,7 @@ LIMIT 1
 |:--------:|:-------:|
 |    C++   |    9    |
 
-## 8) Developers working from top rated application producers in a nation
+## 8) Top rated applications produced in a country that uses Java or Ruby on Rails as their backend language
 
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -218,18 +218,29 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX foaf: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
+PREFIX mobileAppOnt: <http://www.semanticweb.org/lucasmac/ontologies/2021/2/mobile_applications#>
 
-SELECT  DISTINCT ?Nation  ?Producer ?Application  (str(?userRanking) as ?userRankingCount)
+SELECT  DISTINCT ?Nation ?Producer ?Application  (str(?userRanking) as ?userRankingCount)
 WHERE {
-	?Nation rdf:type foaf:Nation.
-	?Developer rdf:type foaf:Developer.
-	?Producer rdf:type foaf:Producer.
-	?Developer foaf:worksIn ?Producer.
-	?Producer foaf:hasBranchIn ?Nation.
-	?Application rdf:type/rdfs:subClassOf* foaf:AppCategory.
-	?Developer foaf:isDeveloperOf ?Application.
-	?Application foaf:userRanking ?userRanking.
-	FILTER (?userRanking >4.5).
+    ?Producer mobileAppOnt:hasHeadQuarter ?Nation.
+    ?Application rdf:type/rdfs:subClassOf* mobileAppOnt:AppCategory.
+    ?Application mobileAppOnt:userRanking ?userRanking.
+    FILTER (?userRanking >2).
+    ?Producer mobileAppOnt:isProducerOf ?Application.
+    {?Application mobileAppOnt:hasBackendLanguage ?Ruby_on_Rails}
+    UNION {?Application mobileAppOnt:hasBackendLanguage ?Java }
 }
+ORDER BY DESC(?userRanking) 
 ```
+
+#### Result
+
+|     Nation     |   Producer   | Application | userRankingCount |
+|:--------------:|:------------:|:-----------:|:----------------:|
+|  United_States |    Paypal    |  PaypalApp  |     "4.81788"    |
+|  United_States |    IMDBInc   |   IMDBapp   |     "4.73557"    |
+| United_Kingdom |  FacebookInc |   Whatsapp  |     "4.68778"    |
+|  United_States |   GoogleInc  |  GoogleMaps |     "4.64859"    |
+|      China     |    9gagInc   |     9gag    |     "4.63912"    |
+|  United_States | FoodpandaInc |  FoodPanda  |     "4.59159"    |
+| United_Kingdom |  FacebookInc |   Facebook  |     "2.64015"    |
